@@ -4,7 +4,8 @@ RUN apt-get install -y libicu-dev \
         libfreetype6-dev \
 		libjpeg62-turbo-dev \
 		libmcrypt-dev \
-		libpng-dev
+		libpng-dev \
+		vim
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-install -j$(nproc) iconv bcmath intl mbstring mysqli pdo pdo_mysql
 RUN pecl install xdebug-2.7.0beta1 \
