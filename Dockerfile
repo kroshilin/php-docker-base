@@ -5,9 +5,10 @@ RUN apt-get install -y libicu-dev \
 		libjpeg62-turbo-dev \
 		libmcrypt-dev \
 		libpng-dev \
-		vim
+		vim \
+		unzip
 RUN docker-php-ext-configure intl
-RUN docker-php-ext-install -j$(nproc) iconv bcmath intl mbstring mysqli pdo pdo_mysql opcache
+RUN docker-php-ext-install -j$(nproc) iconv bcmath intl mbstring mysqli pdo pdo_mysql opcache zip
 RUN pecl install xdebug-2.6.1 \
 	&& docker-php-ext-enable xdebug
 RUN apt-get clean
