@@ -10,4 +10,4 @@ RUN chmod +x /scripts/start.sh && rm -rf /tmp/*
 
 ENTRYPOINT ["/scripts/start.sh"]
 
-CMD ["/bin/sh"]
+CMD ["/bin/bash"]
