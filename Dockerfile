@@ -15,7 +15,7 @@ RUN docker-php-ext-configure intl
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 RUN docker-php-ext-install iconv bcmath mbstring mysqli pdo pdo_mysql opcache zip gd exif
 RUN apk add --no-cache $PHPIZE_DEPS \
-    && pecl install xdebug-2.8.0beta1 \
+    && pecl install xdebug-2.9.0 \
     && docker-php-ext-enable xdebug
 RUN mkdir -p /var/run/php
 RUN composer global require hirak/prestissimo
