@@ -1,4 +1,4 @@
-FROM php:7.4.0beta1-fpm-alpine
+FROM php:7.4-fpm-alpine
 RUN apk add vim unzip bash composer
 RUN apk add --no-cache \
 		icu-dev \
