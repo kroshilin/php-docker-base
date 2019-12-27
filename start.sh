@@ -17,7 +17,7 @@ if [[ $XDEBUG_ENABLED == true ]]; then
 
     rm -f /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
     touch /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-    echo zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20190529/xdebug.so > /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    echo zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20190902/xdebug.so > /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 else
     rm -f /usr/local/etc/php/conf.d/00_xdebug.ini
     rm -f /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
